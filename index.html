@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슈팅 스타</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">슈팅 스타</div>
+    <div class="game-container">
+        <div class="score-board">
+            <div>점수: <span id="score">0</span></div>
+            <div>레벨: <span id="level">1</span></div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="700"></canvas>
+        <div class="controls">
+            <p>조작법: ← → 이동,  Space bar 발사</p>
+        </div>
+    </div>
+    
+    <!-- 좌측 고정 광고 -->
+    <div id="left-ad" class="ad-container left-ad">
+        <ins class="kakao_ad_area"
+             style="display: block; width: 160px; height: 600px;"
+             data-ad-unit=""
+             data-ad-width="160"
+             data-ad-height="600">
+        </ins>
+    </div>
+    
+    <!-- 우측 고정 광고 -->
+    <div id="right-ad" class="ad-container right-ad">
+        <ins class="kakao_ad_area"
+             style="display: block; width: 160px; height: 600px;"
+             data-ad-unit=""
+             data-ad-width="160"
+             data-ad-height="600">
+        </ins>
+    </div>
+    
+    <!-- 카카오 광고 스크립트 -->
+    <script src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

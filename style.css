@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0c1445, #1a237e, #4a148c);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+    text-shadow: 0 0 15px #ff00ff;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.game-container {
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(100, 100, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 100; /* 광고보다 위에 표시되도록 설정 */
+}
+
+#gameCanvas {
+    border: 3px solid #4a148c;
+    background: radial-gradient(circle at center, #0d47a1, #000000);
+    border-radius: 5px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00b0ff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.controls {
+    margin-top: 15px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px 10px;
+}
+
+.controls p {
+    margin: 0;
+}
+
+/* 별 효과 */
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* 광고 컨테이너 */
+.ad-container {
+    position: fixed;
+    top: 30px;
+    width: 160px;
+    height: 600px;
+    pointer-events: auto;
+    z-index: 10; /* 게임보다 아래에 표시되도록 설정 */
+}
+
+.left-ad {
+    left: 10px;
+}
+
+.right-ad {
+    right: 16px;
+}
